@@ -318,7 +318,7 @@ section {
     color: white;
     padding: 80px 0;
     min-height: 100vh;
-    flex-direction: column;
+    /* flex-direction: column; */
     margin-bottom: -7vh;
     border-bottom: 1px solid gray;
 }
@@ -368,10 +368,11 @@ section {
     padding: 15px;
     flex: 1;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: space-between;
     position: relative;
     min-height: 280px;
+    /* border: 2px solid blue; */
 }
 .card:hover{
     box-shadow: 0 0 5px #fc5699;
@@ -387,10 +388,11 @@ section {
     margin-top: 10px;
 }
 .project-cards{
-    display: flex;
-    gap: 2em;
+    /* display: flex; */
+    /* gap: 20px; */
     width: 80%;
     margin: auto;
+    /* border: 2px solid red; */
 }
 .card img{
     width: 150px;
@@ -408,8 +410,19 @@ section {
     }
 }
 @media(max-width: 901px){
-    .project-header{
+    .project-cards{
         flex-direction: column;
+        /* gap: 20px; */
+    }
+    .view-link{
+        left: 60%;
+        bottom: 10px;
+    }
+}
+@media(max-width: 364px){
+    .view-link{
+        left: 28%;
+        bottom: 10px;
     }
 }
 
@@ -639,7 +652,11 @@ section {
     font-size: 1.5em;
 }
 
-
+@media(max-width:594px){
+    .contact-form button{
+        width: 18%;
+    }
+}
 /* footer media query */
 .footer {
     width: 100%;
@@ -701,9 +718,17 @@ section {
     position: absolute;
     bottom: 8px;
 }
-
-@media(max-width:584px) {
-    .main-foot {
-        width: 100%;
+@media(max-width:594px){
+    .footer{
+        min-height: 90vh;
     }
+   .main-foot{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+   } 
+   .footer-image{
+    width: 150px;
+   }
 }
